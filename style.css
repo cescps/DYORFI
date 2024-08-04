@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 2rem;
+}
