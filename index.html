@@ -6,11 +6,12 @@
     <title>DYORFI</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+
 </head>
 <body>
   
-   <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -53,52 +54,69 @@
 }
   </script>
 </div>
-<!-- TradingView Widget END -->  
-  
-    <div class="separator"></div>
-  
-   
+
+    
     <div class="centered-text">
-        <div class="main-title">DYORFI (Do Your Own Research in Finance)</div>
-        <div class="quote">"Never invest in a business you can’t understand." 🗣️</div>
-
-        <br><br><br>
-
-        <iframe src="https://embeds.beehiiv.com/5d3e8045-5860-4265-a234-2c225ec32ea9?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
-
+        <div class="main-title">
+           <h2>
+      <span>D</span>o <span>Y</span>our <span>O</span>wn <span>R</span>esearch in <span>Fi</span>nance
+    </h2>
+          
+         </div>
+        <div class="quote">
+          
+           <h4>"Never invest in a business
+you can’t understand." 🗣️</h4>
+          
+         </div>
       
-    </div> 
+       <iframe src="https://embeds.beehiiv.com/5d3e8045-5860-4265-a234-2c225ec32ea9?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
 
-    <script>
-        function checkMarketStatus() {
-            const now = new Date();
-            const day = now.getDay();
-            const hour = now.getHours();
-            const minute = now.getMinutes();
-            let marketOpen = false;
+                    <br><br>
 
-            // Market is open Monday to Friday, 9:30 AM to 4:00 PM EST
-            if (day >= 1 && day <= 5) {
-                if (hour > 9 || (hour === 9 && minute >= 30)) {
-                    if (hour < 16 || (hour === 16 && minute === 0)) {
-                        marketOpen = true;
-                    }
-                }
-            }
-
-            const marketStatusDiv = document.getElementById('market-status');
-            if (marketOpen) {
-                marketStatusDiv.innerHTML = 'Stock Market is Open 🟢';
-            } else {
-                marketStatusDiv.innerHTML = 'Stock Market is Closed 🔴';
-            }
-        }
-
-        // Check market status when the page loads
-        checkMarketStatus();
-
-        // Refresh market status every minute
-        setInterval(checkMarketStatus, 60000);
-    </script>
+   
+     <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
+  {
+  "exchanges": [],
+  "dataSource": "SPX500",
+  "grouping": "sector",
+  "blockSize": "market_cap_basic",
+  "blockColor": "change",
+  "locale": "en",
+  "symbolUrl": "",
+  "colorTheme": "dark",
+  "hasTopBar": false,
+  "isDataSetEnabled": false,
+  "isZoomEnabled": false,
+  "hasSymbolTooltip": false,
+  "isMonoSize": false,
+  "width": "100%",
+  "height": "100%"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+       
+      
+        </div>
+  
+              <br><br>
+      
+        
+    <!--   <div class="containerarticles">
+        <a href="your-link-here.html" class="article">
+            <img src="path/to/your/image1.jpg" alt="Wildfire">
+            <h2>Options: Explained</h2>
+            <p>This is an article about options and their explanations. <span>Read more</span></p>
+        </a>
+         Add more articles here -->
+          
+    <br><br>
+    
+          
 </body>
 </html>
