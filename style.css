@@ -1,45 +1,28 @@
-body {
-    background-color: black;
-    margin: 0;
-    color: white;
-    font-family: 'Inter', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://unpkg.com/normalize.css') layer(normalize);
 
-   .header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #AAA3FF;
-            border-radius: 0px;
 
-        }
-      .header h1 {
-    font-size: 1.4em;
-    margin: 0;
-    color: #181818;
-}
+body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+    
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
 
-  .container {
-            max-width: 800px;
-            width: 100%;
-            text-align: left;
-        }
-        h2 {
-            margin: 0 0 0.5em 0;
-          font-size: 1.2em;
-            font-weight: 800;
-        }
 
-        h1 {
-            font-size: 2.5em;
-            font-weight: 900;
-        }
-      
-        
-       h4 {
+    p::selection {
+      background-color: red;
+    }
+
+    .underline-link {
+      text-decoration: underline;
+    }
+
+  
+  h4 {
             color: LightGray;
         }
 
@@ -49,16 +32,95 @@ body {
             margin: 20px 0;
             text-align: center;
         }
-
-   
-
-.separator {
-    width: 100%;
-    height: 3px;
-    background-color: white;
   
+hr.dashed {
+  border-top: 3px dashed #bbb;
 }
 
+.desenvolupament {
+text-align: center;
+}
+
+  .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 25px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 21px;
+      width: 21px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #4cd964;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #4cd964;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(25px);
+      -ms-transform: translateX(25px);
+      transform: translateX(25px);
+    }
+
+
+ .arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    translate: -50% 100%;
+    z-index: 9999;
+  }
+
+  [data-use-css='true'] .arrow {
+    translate: -50% 100%;
+  }
+
+  .arrow svg {
+    width: 70px;
+    scale: -1 1;
+  }
+
+  .arrow label {
+    font-family: 'Gloria Hallelujah', cursive;
+    position: absolute;
+    left: 110%;
+    bottom: 25%;
+    white-space: nowrap;
+  }
+}
 
 .centered-text {
     text-align: center;
@@ -76,53 +138,3 @@ body {
  .main-title h2 span {
     color: #AAA3FF;
   }
-
-.quote {
-    font-size: 1.1rem;
-    margin-top: 20px;
-  margin: 40px;
-}
-
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-      list-style: none;
-    align-items: center;
-}
-
-li a {
-    text-decoration: none;
-    color: white;
-}
-
-li span {
-    color: gray;
-      align-items: center;
-
-}
-
-.label {
-    background-color: orange;
-    color: black;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 0.9em;
-    margin-left: 10px;
-}
-
-
-
-.footer {
-    background-color: #000;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.footer-content {
-    color: #aaa;
-    font-size: 0.7em;
-}
